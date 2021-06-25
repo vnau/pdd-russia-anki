@@ -1,0 +1,92 @@
+.card, .ankiCard {
+    /*font-family: Calibri;*/
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+
+small {
+    font-size: 0.7rem;
+}
+
+.answers {
+    counter-reset: answers-counter;
+    min-width: 50%;
+    max-width: 100%;
+    /*display: inline-block;*/
+}
+
+    .answers .answer::before {
+        content: counter(answers-counter) ".\00a0\00a0 ";
+    }
+
+
+.answer {
+    /*font-family: Calibri !important;
+    display: flex;*/
+    width: 100%;
+    counter-increment: answers-counter;
+    margin: 4px -0.75rem;
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    font-weight: 400;
+    text-align: left;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem !important;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+    .answer:empty {
+        display: none;
+    }
+
+    .answer.correct {
+        color: #fff;
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+
+    .answer.wrong {
+        color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+
+
+button.answer {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+    button.answer:hover {
+        color: #212529;
+        background-color: #e2e6ea;
+        border-color: #dae0e5;
+    }
+
+    button.answer.wrong:hover {
+        color: #fff;
+        background-color: #c82333;
+        border-color: #bd2130;
+    }
+
+    button.answer.correct:hover {
+        color: #fff;
+        background-color: #218838;
+        border-color: #1e7e34;
+    }
+
+.hidden {
+    font-weight: bold;
+    display: none;
+    line-height: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
